@@ -6,6 +6,13 @@ pom.xml.versionsBackup
 release.properties
 .flattened-pom.xml
 
+# Maven Wrapper
+!mvnw
+!mvnw.cmd
+!/.mvn/wrapper/maven-wrapper.jar
+!/.mvn/wrapper/maven-wrapper.properties
+
+
 # Eclipse
 .project
 .classpath
@@ -39,10 +46,19 @@ nb-configuration.xml
 # Local environment
 .env
 
-# Plugin directory
-/.quarkus/cli/plugins/
+# Quarkus
+.quarkus
+
 # TLS Certificates
 .certs/
 
 # React
 node_modules/
+/build
+dist/
+*.log
+
+# Configuri temporare sau backup
+*.bak
+*.tmp
+*.temp
