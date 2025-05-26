@@ -1,0 +1,25 @@
+# VS Code config
+.vscode
+
+# Quarkus cache
+.quarkus/
+
+# Build output
+target/
+
+# Node modules (dacă ajung accidental în root)
+node_modules/
+
+# Git repo
+.git
+.gitignore
+
+# System files
+.DS_Store
+
+# Logs
+*.log
+
+# Docker files care nu trebuie copiate
+.dockerignore
+Dockerfile

@@ -1,0 +1,31 @@
+services:
+  backend:
+    build:
+      context: .
+      target: dev
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./src:/app/src
+      - ./pom.xml:/app/pom.xml
+    depends_on:
+      - db
+
+  frontend:
+    build:
+      context: ./src/main/webapp
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./src/main/webapp:/usr/src/app
+
+  db:
+    image: mariadb:11
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: errorlens
+      MYSQL_USER: errorlens
+      MYSQL_PASSWORD: errorlens
+    ports:
+      - "3306:3306"
